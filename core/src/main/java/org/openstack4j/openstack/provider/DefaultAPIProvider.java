@@ -171,7 +171,9 @@ import org.openstack4j.api.trove.InstanceFlavorService;
 import org.openstack4j.api.trove.InstanceService;
 import org.openstack4j.api.trove.TroveService;
 import org.openstack4j.api.workflow.*;
+import org.openstack4j.fusionapi.compute.FcComputeService;
 import org.openstack4j.fusionapi.compute.FcFlavorService;
+import org.openstack4j.fusioncloud.compute.internal.FcComputeServiceImpl;
 import org.openstack4j.fusioncloud.compute.internal.FcFlavorServiceImpl;
 import org.openstack4j.openstack.artifact.internal.ArtifactServiceImpl;
 import org.openstack4j.openstack.artifact.internal.ToscaTemplatesArtifactServiceImpl;
@@ -549,6 +551,7 @@ public class DefaultAPIProvider implements APIProvider {
         bind(WorkflowEnvironmentService.class, WorkflowEnvironmentServiceImpl.class);
         bind(CronTriggerService.class, CronTriggerServiceImpl.class);
         bind(FcFlavorService.class, FcFlavorServiceImpl.class);
+        bind(FcComputeService.class, FcComputeServiceImpl.class);
     }
 
     /**
