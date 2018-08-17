@@ -18,6 +18,7 @@ import org.openstack4j.api.senlin.SenlinService;
 import org.openstack4j.api.trove.TroveService;
 import org.openstack4j.api.tacker.TackerService;
 import org.openstack4j.api.workflow.WorkflowService;
+import org.openstack4j.fusionapi.compute.FcComputeService;
 
 import java.util.ServiceLoader;
 
@@ -68,6 +69,15 @@ public class Apis {
      */
     public static ComputeService getComputeServices() {
         return get(ComputeService.class);
+    }
+
+    /**
+     * Gets the fusioncloud  compute services API
+     *
+     * @return the fusioncloud compute services
+     */
+    public static FcComputeService getFcComputeServices(){
+        return get(FcComputeService.class);
     }
 
     /**

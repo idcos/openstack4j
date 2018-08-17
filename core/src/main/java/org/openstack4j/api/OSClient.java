@@ -23,6 +23,7 @@ import org.openstack4j.api.trove.TroveService;
 import org.openstack4j.api.types.Facing;
 import org.openstack4j.api.types.ServiceType;
 import org.openstack4j.api.workflow.WorkflowService;
+import org.openstack4j.fusionapi.compute.FcComputeService;
 import org.openstack4j.model.identity.v2.Access;
 import org.openstack4j.model.identity.v3.Token;
 import org.openstack4j.api.magnum.MagnumService;
@@ -165,6 +166,13 @@ public interface OSClient< T extends OSClient<T>> {
      * @return the compute service
      */
     ComputeService compute();
+
+    /**
+     * Return the fusioncloud Compute Service API
+     *
+     * @return the fusioncloud  compute service
+     */
+    FcComputeService fcCompute();
 
     /**
      * Returns the Networking Service API

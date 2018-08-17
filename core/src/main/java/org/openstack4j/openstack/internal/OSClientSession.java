@@ -35,6 +35,7 @@ import org.openstack4j.api.types.Facing;
 import org.openstack4j.api.types.ServiceType;
 import org.openstack4j.api.workflow.WorkflowService;
 import org.openstack4j.core.transport.Config;
+import org.openstack4j.fusionapi.compute.FcComputeService;
 import org.openstack4j.model.identity.AuthVersion;
 import org.openstack4j.model.identity.URLResolverParams;
 import org.openstack4j.model.identity.v2.Access;
@@ -116,6 +117,13 @@ public abstract class OSClientSession<R, T extends OSClient<T>> implements Endpo
      */
     public ComputeService compute() {
         return Apis.getComputeServices();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public FcComputeService fcCompute() {
+        return Apis.getFcComputeServices();
     }
 
     /**
