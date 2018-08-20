@@ -171,10 +171,16 @@ import org.openstack4j.api.trove.InstanceFlavorService;
 import org.openstack4j.api.trove.InstanceService;
 import org.openstack4j.api.trove.TroveService;
 import org.openstack4j.api.workflow.*;
+import org.openstack4j.fusionapi.compute.FcComputeImageService;
 import org.openstack4j.fusionapi.compute.FcComputeService;
 import org.openstack4j.fusionapi.compute.FcFlavorService;
+import org.openstack4j.fusionapi.compute.ext.FcHypervisorService;
+import org.openstack4j.fusionapi.compute.ext.FcZoneService;
+import org.openstack4j.fusioncloud.compute.internal.FcComputeImageServiceImpl;
 import org.openstack4j.fusioncloud.compute.internal.FcComputeServiceImpl;
 import org.openstack4j.fusioncloud.compute.internal.FcFlavorServiceImpl;
+import org.openstack4j.fusioncloud.compute.internal.ext.FcHypervisorServiceImpl;
+import org.openstack4j.fusioncloud.compute.internal.ext.FcZoneServiceImpl;
 import org.openstack4j.openstack.artifact.internal.ArtifactServiceImpl;
 import org.openstack4j.openstack.artifact.internal.ToscaTemplatesArtifactServiceImpl;
 import org.openstack4j.openstack.barbican.internal.BarbicanServiceImpl;
@@ -552,6 +558,9 @@ public class DefaultAPIProvider implements APIProvider {
         bind(CronTriggerService.class, CronTriggerServiceImpl.class);
         bind(FcFlavorService.class, FcFlavorServiceImpl.class);
         bind(FcComputeService.class, FcComputeServiceImpl.class);
+        bind(FcComputeImageService.class, FcComputeImageServiceImpl.class);
+        bind(FcZoneService.class, FcZoneServiceImpl.class);
+        bind(FcHypervisorService.class, FcHypervisorServiceImpl.class);
     }
 
     /**
