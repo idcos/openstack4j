@@ -19,6 +19,7 @@ import org.openstack4j.api.trove.TroveService;
 import org.openstack4j.api.tacker.TackerService;
 import org.openstack4j.api.workflow.WorkflowService;
 import org.openstack4j.fusionapi.compute.FcComputeService;
+import org.openstack4j.fusioncloud.compute.internal.FcComputeServiceImpl;
 
 import java.util.ServiceLoader;
 
