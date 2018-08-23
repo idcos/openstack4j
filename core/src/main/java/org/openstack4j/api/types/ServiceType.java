@@ -24,7 +24,6 @@ public enum ServiceType {
   	MAGNUM("magnum", "container"),
 	DNS("designate", "dns"),
 	WORKFLOW("mistral", "workflow"),
-	FUSION_COMPUTE("ecs","compute"),
 	UNKNOWN("NA", "NA")
 	;
 

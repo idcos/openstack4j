@@ -8,5 +8,6 @@ package org.openstack4j.api.client;
 public enum CloudProvider {
     UNKNOWN,
     RACKSPACE,
-    HPCLOUD
+    HPCLOUD,
+    FSCLOUD
 }

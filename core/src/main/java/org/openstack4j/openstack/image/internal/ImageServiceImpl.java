@@ -58,7 +58,7 @@ public class ImageServiceImpl extends BaseImageServices implements ImageService 
      */
     @Override
     public List<? extends Image> list() {
-        String uri = getProvider() == CloudProvider.RACKSPACE ? "/images" : "/images/detail";
+        String uri = (getProvider() == CloudProvider.RACKSPACE || getProvider() == CloudProvider.FSCLOUD) ? "/images" : "/images/detail";
         return get(Images.class, uri(uri)).execute().getList();
     }
 
